@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 18, 2015 2:01:27 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.hp.Faqs" table="faqs" catalog="stp15_june">
+        <id name="faqid" type="java.lang.Integer">
+            <column name="faqid" />
+            <generator class="identity" />
+        </id>
+        <property name="ques" type="string">
+            <column name="ques" length="100" not-null="true" />
+        </property>
+        <property name="ans" type="string">
+            <column name="ans" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

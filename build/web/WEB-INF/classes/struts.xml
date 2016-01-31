@@ -1,0 +1,115 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"></result-type>
+        </result-types>
+        <action name="welcome" class="com.hp.Utility" method="Enterwebsite" >
+            <result type="tiles" name="success">/user.Home</result>
+        </action>
+        <action name="Login" class="com.hp.Utility" method="Enterwebsite" >
+            <result type="tiles" name="success">/user.Login</result>
+        </action>
+        <action name="Home" class="com.hp.Utility" method="Enterwebsite" >
+            <result type="tiles" name="success">/user.Home</result>
+        </action>
+        
+        <action name="loginauth" class="com.hp.LoginAction" >
+            <result type="tiles" name="success">/user.loggedin</result>
+            <result type="tiles" name="error">/user.Login</result>
+            <result type="tiles" name="input">/user.Login</result>
+        </action>
+        <action name="Register" class="com.hp.Utility" method="Enterwebsite" >
+            <result type="tiles" name="success">/user.Reg</result>
+        </action>
+        <action name="Home2" class="com.hp.Utility" method="Enterwebsite" >
+            <result type="tiles" name="success">/user.loggedin</result>
+        </action>
+        <action name="Reg" class="com.hp.RegisterAction" >
+            <result type="tiles" name="success">/user.registersuccess</result>
+            <result type="tiles" name="error">/user.Reg</result>
+            <result type="tiles" name="input">/user.Reg</result>
+        </action>
+        <action name="Admin" class="com.hp.Utility" method="Enterwebsite">
+            <result type="tiles" name="success">/user.AdminLogin</result>
+        </action>
+        <action name="plus" class="com.hp.Utility" method="Enterwebsite" >
+            <result type="tiles" name="success">/user.Addques</result>
+        </action>
+        <action name="add" class="com.hp.AddAction" >
+            <result type="tiles" name="success">/user.Adddone</result>
+            <result type="tiles" name="error">/user.Addques</result>
+            <result type="tiles" name="input">/user.Addques</result>
+        </action>
+        <action name="administrator" class="com.hp.AdminAction" >
+            <result type="tiles" name="success">/user.Admin</result>
+            <result type="tiles" name="error">/user.AdminLogin</result>
+            <result type="tiles" name="input">/user.AdminLogin</result>
+        </action>
+        <action name="logout" class="com.hp.LogoutAction" >
+            <result type="tiles" name="success">/user.Logg</result>
+        </action>
+        <action name="startexam" class="com.hp.Examination" method="firstQuestion" >
+            <result type="tiles" name="success">/user.takeexam</result>
+        </action>
+        
+        <action name="Question" class="com.hp.Examination" method="nextQuestion" >
+            <result type="tiles" name="success">/user.takeexam</result>
+        </action>
+        
+        <action name="start" class="com.hp.Utility" method="Enterwebsite" >
+            <result type="tiles" name="success">/user.rules</result>
+        </action>
+        
+        <action name="Home3" class="com.hp.Utility" method="Enterwebsite" >
+            <result type="tiles" name="success">/user.home3</result>
+        </action>
+        
+        <action name="about" class="com.hp.Utility" method="Enterwebsite" >
+            <result type="tiles" name="success">/user.about</result>
+        </action>
+        
+        <action name="about1" class="com.hp.Utility" method="Enterwebsite" >
+            <result type="tiles" name="success">/user.about1</result>
+        </action>
+        
+        <action name="us" class="com.hp.Utility" method="Enterwebsite" >
+            <result type="tiles" name="success">/user.rate</result>
+        </action>
+        
+        <action name="faq" class="com.hp.Faq" method="getAllQuestion" >
+            <result type="tiles" name="success">/user.faqmenu</result>
+        </action>
+        
+        <action name="rr" class="com.hp.Faq" method="rate" >
+            <result type="tiles" name="success">/user.displayrate</result>
+        </action>
+        
+        <action name="faq2" class="com.hp.Faq" method="getAllQuestion" >
+            <result type="tiles" name="success">/user.faqmenu2</result>
+        </action>
+        
+        
+        <action name="ASK" class="com.hp.Faq" method="getAdd" >
+            <result type="tiles" name="success">/user.faqadd</result>
+        </action>
+        
+        <action name="ASK2" class="com.hp.Faq" method="getAdd" >
+            <result type="tiles" name="success">/user.faqadd2</result>
+        </action>
+        
+        <action name="result" class="com.hp.Examination" method="result" >
+            <result type="tiles" name="success">/user.result</result>
+        </action>
+        
+        <action name="bank" class="com.hp.Questt" method="getAllQuestion">
+            <result type="tiles" name="success">/user.bank</result>
+        </action>
+        
+        
+    </package>
+</struts>

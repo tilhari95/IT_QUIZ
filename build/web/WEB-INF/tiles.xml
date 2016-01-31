@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ 
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+    <definition name="/user.Home" template="/layout.jsp" >
+        <put-attribute name="header" value="/header.jsp" />
+        <put-attribute name="menu" value="/menu.jsp" />
+        <put-attribute name="body" value="/body.jsp" />
+        <put-attribute name="footer" value="/footer.jsp" />
+    </definition>
+    <definition name="/user.Login" extends="/user.Home" >
+        <put-attribute name="body" value="/login.jsp" />
+    </definition>
+    
+    <definition name="/user.loggedin" template="/layout.jsp" >
+        <put-attribute name="header" value="/header.jsp" />
+        <put-attribute name="body" value="/log.jsp" />
+        <put-attribute name="menu" value="/menu_user.jsp" />
+        <put-attribute name="footer" value="/footer.jsp" />
+    </definition>
+    
+    <definition name="/user.Reg" extends="/user.Home" >
+        <put-attribute name="body" value="/register.jsp" />
+    </definition>
+     <definition name="/user.registersuccess" extends="/user.Home" >
+        <put-attribute name="body" value="/regis.jsp" />
+    </definition>
+    <definition name="/user.Admin" template="/layout.jsp" >
+        <put-attribute name="header" value="/header.jsp" />
+        <put-attribute name="menu" value="/menu_admin.jsp" />
+        <put-attribute name="body" value="/welcomeadmin.jsp" />
+        <put-attribute name="footer" value="/footer.jsp" />
+    </definition>
+     <definition name="/user.AdminLogin" extends="/user.Home" >
+        <put-attribute name="body" value="/loginadmin.jsp" />
+    </definition>
+    
+     <definition name="/user.home3" extends="/user.Admin" >
+        <put-attribute name="body" value="/welcomeadmin.jsp" />
+    </definition>
+
+    <definition name="/user.AdminLogin" extends="/user.Home" >
+        <put-attribute name="body" value="/loginadmin.jsp" />
+    </definition>
+    <definition name="/user.Addques" extends="/user.Admin" >
+        <put-attribute name="body" value="/addin.jsp" />
+    </definition>
+    <definition name="/user.Adddone" extends="/user.Admin" >
+        <put-attribute name="body" value="/addsuccess.jsp" />
+    </definition>
+    
+    <definition name="/user.bank" extends="/user.Admin" >
+        <put-attribute name="body" value="/bank.jsp" />
+    </definition>
+    
+   
+    <definition name="/user.Logg" extends="/user.Home" >
+        <put-attribute name="body" value="/logoutsuccess.jsp" />
+    </definition>
+    
+    <definition name="/user.about1" extends="/user.Home" >
+        <put-attribute name="body" value="/about.jsp" />
+    </definition>
+    
+    <definition name="/user.faqmenu" extends="/user.Home" >
+        <put-attribute name="body" value="/faq.jsp" />
+    </definition>
+    
+    <definition name="/user.faqmenu2" extends="/user.loggedin" >
+        <put-attribute name="body" value="/faq2.jsp" />
+    </definition>
+    
+    <definition name="/user.faqadd" extends="/user.Home" >
+        <put-attribute name="body" value="/faqadd.jsp" />
+    </definition>
+    
+    <definition name="/user.faqadd2" extends="/user.loggedin" >
+        <put-attribute name="body" value="/faqadd.jsp" />
+    </definition>
+    
+    <definition name="/user.rules" extends="/user.loggedin" >
+        <put-attribute name="body" value="/Instructions.jsp" />
+    </definition>
+    
+    <definition name="/user.takeexam" extends="/user.loggedin" >
+        <put-attribute name="body" value="/DisplayQues_1.jsp" />
+    </definition>
+       
+    <definition name="/user.result" extends="/user.loggedin" >
+        <put-attribute name="body" value="/DisplayResult.jsp" />
+    </definition>
+    
+    <definition name="/user.about" extends="/user.loggedin" >
+        <put-attribute name="body" value="/about.jsp" />
+    </definition>
+    
+    <definition name="/user.rate" extends="/user.loggedin" >
+        <put-attribute name="body" value="/rate.jsp" />
+    </definition>
+    
+    <definition name="/user.displayrate" extends="/user.loggedin" >
+        <put-attribute name="body" value="/ratesuccess.jsp" />
+    </definition>
+    
+</tiles-definitions>

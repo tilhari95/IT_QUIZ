@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 18, 2015 2:01:27 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.hp.Questions" table="questions" catalog="stp15_june">
+        <id name="questionid" type="java.lang.Integer">
+            <column name="questionid" />
+            <generator class="identity" />
+        </id>
+        <property name="question" type="string">
+            <column name="question" length="45" not-null="true" />
+        </property>
+        <property name="opt1" type="string">
+            <column name="opt1" length="45" not-null="true" />
+        </property>
+        <property name="opt2" type="string">
+            <column name="opt2" length="45" not-null="true" />
+        </property>
+        <property name="opt3" type="string">
+            <column name="opt3" length="45" not-null="true" />
+        </property>
+        <property name="opt4" type="string">
+            <column name="opt4" length="45" not-null="true" />
+        </property>
+        <property name="answer" type="string">
+            <column name="answer" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
